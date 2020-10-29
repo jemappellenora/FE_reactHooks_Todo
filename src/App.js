@@ -33,6 +33,7 @@ const App = () => {
           </div>
         ))}
       </div>
+      <button onClick={() => setTodos([])}>Reset</button>
     </div>
   );
 };
