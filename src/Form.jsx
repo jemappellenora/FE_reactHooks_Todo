@@ -15,11 +15,11 @@ const Form = () => {
   let number = useInputValue("");
 
   return (
-    <div>
+    <form>
       <input {...name} />
       <input {...email} />
       <input {...number} />
-    </div>
+    </form>
   );
 };
 
