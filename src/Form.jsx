@@ -22,7 +22,7 @@ const Form = ({ onSubmit }) => {
         resetValue();
       }}
     >
-      <input {...text} />
+      <input className="input" placeHolder="tasks..." {...text} />
       {/* <input {...email} /> */}
     </form>
   );

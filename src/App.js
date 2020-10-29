@@ -19,6 +19,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <h1>Nora's Todo List</h1>
       <Form
         onSubmit={(text) => setTodos([{ text, complete: false }, ...todos])}
       />
@@ -26,6 +27,7 @@ const App = () => {
         {todos.map(({ text, complete }, i) => (
           <div
             key={text}
+            className="displayTextFont"
             onClick={() => toggleComplete(i)}
             style={{ textDecoration: complete ? "line-through" : "" }}
           >
@@ -33,7 +35,9 @@ const App = () => {
           </div>
         ))}
       </div>
-      <button onClick={() => setTodos([])}>Reset</button>
+      <button className="button" onClick={() => setTodos([])}>
+        Reset
+      </button>
     </div>
   );
 };
