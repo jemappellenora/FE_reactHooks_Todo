@@ -4,13 +4,14 @@ const useInputValue = (initialValue) => {
   return {
     value,
     onChange: (e) => setValue(e.target.value),
+    resetValue: () => setValue(""),
   };
 };
 
 const Form = ({ onSubmit }) => {
   //   const [value, setValue] = useState("");
   //   return <input value={value} onChange={(e) => setValue(e.target.value)} />;
-  let text = useInputValue("");
+  let { resetValue, ...text } = useInputValue("");
   // let email = useInputValue("")
 
   return (
@@ -18,6 +19,7 @@ const Form = ({ onSubmit }) => {
       onSubmit={(e) => {
         e.preventDefault();
         onSubmit(text.value);
+        resetValue();
       }}
     >
       <input {...text} />
