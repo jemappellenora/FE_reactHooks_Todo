@@ -10,15 +10,13 @@ const useInputValue = (initialValue) => {
 const Form = () => {
   //   const [value, setValue] = useState("");
   //   return <input value={value} onChange={(e) => setValue(e.target.value)} />;
-  let name = useInputValue("");
+  let text = useInputValue("");
   let email = useInputValue("");
-  let number = useInputValue("");
 
   return (
     <form>
-      <input {...name} />
+      <input {...text} />
       <input {...email} />
-      <input {...number} />
     </form>
   );
 };
